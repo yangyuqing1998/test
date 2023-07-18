@@ -1,0 +1,54 @@
+.root {
+  width: 200px;
+  height: 3000px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  .box {
+    span {
+      margin: 2px;
+      &:hover {
+        position: relative;
+      }
+      &:hover::after {
+        content: 'asdaishdkjahsdhashdajhs杀菌的贺卡收到尽快哈就是看打开手机电话';
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        left: 0;
+      }
+    }
+  }
+}
+
+:global {
+  .newToolTip {
+    font-size: 12px;
+    max-width: 100%;
+    padding-top: 6px;
+    padding-left: 12px;
+    .ant-tooltip-content {
+      // 小箭头
+      .ant-tooltip-arrow {
+        display: none; // 不显示小箭头
+      }
+      // 显示文字
+      .ant-tooltip-inner {
+        /* min-width: 87px; */
+        /* min-height: 32px; */
+        padding: 6px 8px;
+        color: #333;
+        text-align: left;
+        text-decoration: none;
+        font-size: 13px;
+        /* word-wrap: break-word; */
+        background-color: #fff;
+        border-radius: 2px;
+        border: 1px solid #333;
+        white-space: nowrap;
+        box-shadow: none;
+      }
+    }
+    // }
+  }
+}

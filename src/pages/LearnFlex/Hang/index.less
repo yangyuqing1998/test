@@ -1,0 +1,31 @@
+.container {
+  width: 500px;
+  border: 1px solid #333;
+  display: flex;
+  margin-bottom: 10px;
+  .figure {
+    height: 180px;
+    width: 150px;
+    background-color: pink;
+  }
+  .body {
+    flex: 1; // 占据剩余空间
+  }
+}
+
+// 单行省略
+.oneline {
+  overflow: hidden;
+  word-break: break-all; // 允许单词内换行
+  text-overflow: ellipsis;
+  white-space: nowrap; // 文本不会换行
+}
+
+// 2行省略
+.twoline {
+  height: 100%; // 不设置高度的话，第三行结尾虽然会显示..，但是之后行数没有被隐藏
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
