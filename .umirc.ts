@@ -26,4 +26,8 @@ export default defineConfig({
     { path: '/create-ref', component: '@/pages/04_createRef/parent' },
   ],
   fastRefresh: {},
+  publicPath: './',
+  history: {
+    type: 'hash',
+  },
 });
